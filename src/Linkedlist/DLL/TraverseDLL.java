@@ -1,7 +1,7 @@
 package Linkedlist.DLL;
 
 
-public class SearchDLL {
+public class TraverseDLL {
     class  Node {
         int data;
         Node next;
@@ -35,23 +35,21 @@ public class SearchDLL {
 
     }
 
-    public boolean search(int key){
+    public void traverse(){
         Node temp = head;
 
         while(temp!=null){
-            if (temp.data==key)
-                return true;
+            System.out.print(temp.data+"-->");
             temp = temp.next;
         }
-        return  false;
 
     }
 
     public static void main(String[] args){
-        SearchDLL list = new SearchDLL();
+        InsertDLL list = new InsertDLL();
         list.insertatEnd(1);
         list.insertatEnd(2);
         list.insertatEnd(3);
-        System.out.println(list.search(2));
+        list.traverse();
     }
 }
