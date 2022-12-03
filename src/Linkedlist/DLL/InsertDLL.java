@@ -73,12 +73,20 @@ public class InsertDLL {
                 temp = temp.next;
             }
 
-            if (temp!=null){
-                newnode.next = temp.next;
+            if (temp.next==null){
                 temp.next = newnode;
+                newnode.prev= temp;
+
+            }
+
+            else if (temp!=null){
+                newnode.next = temp.next;
                 temp.next.prev = newnode;
+                temp.next = newnode;
                 newnode.prev = temp;
             }
+
+
             else
                 System.out.println("Invalid Pos");
         }
