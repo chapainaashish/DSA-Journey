@@ -75,10 +75,12 @@ public class InsertDLL {
 
             if (temp!=null){
                 newnode.next = temp.next;
-                temp.next.prev = newnode;
                 temp.next = newnode;
+                temp.next.prev = newnode;
                 newnode.prev = temp;
             }
+            else
+                System.out.println("Invalid Pos");
         }
 
     }
@@ -97,7 +99,8 @@ public class InsertDLL {
         InsertDLL list = new InsertDLL();
         list.insertatBeg(1);
         list.insertatEnd(3);
-        list.insertatPos(2, 2);
+        list.insertatEnd(5);
+        list.insertatPos(2, 4);
         list.traverse();
     }
 }
