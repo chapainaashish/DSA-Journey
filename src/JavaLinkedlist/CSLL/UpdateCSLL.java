@@ -1,4 +1,4 @@
-package Linkedlist.CSLL;
+package JavaLinkedlist.CSLL;
 
 public class UpdateCSLL {
 }

@@ -1,4 +1,4 @@
-package Linkedlist.DLL;
+package JavaLinkedlist.DLL;
 
 
 public class InsertDLL {
@@ -73,22 +73,23 @@ public class InsertDLL {
                 temp = temp.next;
             }
 
-            if (temp.next==null){
+
+            if (temp==null)
+                System.out.println("Invalid Pos");
+
+            else if (temp.next==null){
                 temp.next = newnode;
                 newnode.prev= temp;
 
             }
 
-            else if (temp!=null){
+            else{
                 newnode.next = temp.next;
                 temp.next.prev = newnode;
                 temp.next = newnode;
                 newnode.prev = temp;
             }
 
-
-            else
-                System.out.println("Invalid Pos");
         }
 
     }

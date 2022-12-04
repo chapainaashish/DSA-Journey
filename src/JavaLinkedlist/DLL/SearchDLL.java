@@ -1,4 +1,4 @@
-package Linkedlist.DLL;
+package JavaLinkedlist.DLL;
 
 
 public class SearchDLL {

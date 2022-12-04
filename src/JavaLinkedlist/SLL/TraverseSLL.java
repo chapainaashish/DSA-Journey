@@ -1,4 +1,4 @@
-package Linkedlist.SLL;
+package JavaLinkedlist.SLL;
 
 class TraverseSll {
     class Node {
