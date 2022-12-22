@@ -1,5 +1,6 @@
 package JavaLinkedlist.DLL;
 
+import java.util.Scanner;
 
 public class InsertDLL {
     class  Node {
@@ -103,13 +104,54 @@ public class InsertDLL {
         }
 
     }
+    public static void main(String args[])
+    {
+        InsertDLL s = new InsertDLL();
+        Scanner input = new Scanner(System.in);
 
-    public static void main(String[] args){
-        InsertDLL list = new InsertDLL();
-        list.insertatBeg(1);
-        list.insertatEnd(3);
-        list.insertatEnd(5);
-        list.insertatPos(2, 4);
-        list.traverse();
+        // for default
+        s.insertatBeg(40);
+        s.insertatBeg(90);
+
+        System.out.println("Enter a number");
+        int num = input.nextInt();
+
+        System.out.println("press 1 for insertion at beginning");
+        System.out.println("press 2 for insertion at End");
+        System.out.println("press 3 for insertion at Specified Position");
+        System.out.println("Enter your choice: ");
+
+
+        int choice=input.nextInt();
+
+        switch(choice)
+        {
+            case 1:
+            {
+                s.insertatBeg(num);
+                s.traverse();
+                break;
+            }
+            case 2:
+            {
+                s.insertatEnd(num);
+                s.traverse();
+                break;
+            }
+
+            case 3:
+            {
+                System.out.println("Enter a position ");
+                int pos = input.nextInt();
+                s.insertatPos(num,pos);
+                s.traverse();
+                break;
+            }
+
+            default:
+            {
+                System.out.println("Invalid Input");
+            }
+        }
     }
 }

@@ -1,5 +1,7 @@
 package JavaLinkedlist.DLL;
 
+import java.util.Scanner;
+
 public class DeleteDLL {
     class  Node {
         int data;
@@ -91,20 +93,52 @@ public class DeleteDLL {
         }
 
     }
+    public static void main(String args[])
+    {
+        DeleteDLL s = new DeleteDLL();
+        s.insertatEnd(1);
+        s.insertatEnd(2);
+        s.insertatEnd(3);
+        s.insertatEnd(4);
 
-    public static void main(String[] args) {
-        DeleteDLL list = new DeleteDLL();
-        list.insertatEnd(1);
-        list.insertatEnd(2);
-        list.insertatEnd(3);
-        list.insertatEnd(4);
-        list.insertatEnd(5);
+        System.out.println("linked list:");
+        s.traverse();
 
-        list.deleteatBeg();
-        list.deleteatEnd();
-        list.deleteatPos(2);
-        list.traverse();
+        System.out.println("\nPress 1 for deletion at beginning");
+        System.out.println("Press 2 for deletion at end");
+        System.out.println("Press 3 for deletion at given position");
+        System.out.println("Enter your choice");
 
+        Scanner input=new Scanner(System.in);
+        int ch=input.nextInt();
+
+        switch(ch)
+        {
+            case 1:
+            {
+                s.deleteatBeg();
+                s.traverse();
+                break;
+            }
+            case 2:
+            {
+                s.deleteatEnd();
+                s.traverse();
+                break;
+            }
+
+            case 3:
+            {
+                System.out.println("Enter the position of element");
+                int pos = input.nextInt();
+                s.deleteatPos(pos);
+                s.traverse();
+                break;
+            }
+            default:
+            {
+                System.out.println("Invalid Choice");
+            }
+        }
     }
-
 }
