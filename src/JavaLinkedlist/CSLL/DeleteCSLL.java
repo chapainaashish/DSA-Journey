@@ -151,9 +151,6 @@ public class DeleteCSLL {
                 break;
             }
 
-
-
-
             case 3:
             {
                 System.out.println("Enter the position of element");
