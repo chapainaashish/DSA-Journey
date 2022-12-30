@@ -39,27 +39,6 @@ public class InsertCSLL {
         }
     }
 
-    // Hello, Not included in Project (Just for Reference)
-    public void  insertatEnd(int x){
-        Node newnode = new Node(x);
-        if(head==null){
-            head=newnode;
-            newnode.next=head;
-            head=newnode;
-        }
-        else if (head.next==head){
-            head.next=newnode;
-            newnode.next=head;
-        }
-        else {
-            Node temp = head;
-            while (temp.next!=head){
-                temp=temp.next;
-            }
-            temp.next=newnode;
-            newnode.next=head;
-        }
-    }
 
     public void insertatPos(int x,int pos){
         Node newnode = new Node(x);
