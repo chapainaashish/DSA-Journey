@@ -1,6 +1,5 @@
 package JavaLinkedlist.CDLL;
 
-
 import java.util.Scanner;
 
 public class InsertCDLL {
@@ -77,11 +76,12 @@ public class InsertCDLL {
         }
         else {
             Node temp = head;
-            for (int i = 1; i < pos-1 && temp.next!=head; i++) {
+            for (int i = 1; i < pos-1; i++) {
                 temp = temp.next;
             }
 
-            if(temp.next!=head){
+
+            if(temp!=head){
                 newnode.next = temp.next;
                 newnode.prev = temp;
                 temp.next.prev = newnode;
