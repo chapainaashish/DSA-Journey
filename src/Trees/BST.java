@@ -64,7 +64,7 @@ class BinaryTree {
 
     private Node minNode(Node root) {
         if (root.left!=null)
-            return minNode(root);
+            return minNode(root.left);
         else
             return root;
     }
