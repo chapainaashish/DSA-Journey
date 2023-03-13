@@ -21,8 +21,7 @@ class BinaryTree {
 
     private Node insertNode(Node root, int data) {
         if (root == null) {
-            Node newnode = new Node(data);
-            return newnode;
+            return new Node(data);
         }
 
         else if (data < root.data)
