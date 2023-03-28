@@ -18,6 +18,14 @@ class BinaryTree {
         root = insertNode(root, data);
     }
 
+    public void delete(int data) {
+        root = deleteNode(root, data);
+    }
+
+    public boolean search(int data) {
+        return searchNode(root, data);
+    }
+
 
     private Node insertNode(Node root, int data) {
         if (root == null) {
@@ -31,10 +39,6 @@ class BinaryTree {
             root.right = insertNode(root.right, data);
 
         return root;
-    }
-
-    public void delete(int data) {
-        root = deleteNode(root, data);
     }
 
     private Node deleteNode(Node root, int data) {
@@ -66,10 +70,6 @@ class BinaryTree {
             return minNode(root.left);
         else
             return root;
-    }
-
-    public boolean search(int data) {
-        return searchNode(root, data);
     }
 
     private boolean searchNode(Node root, int data) {

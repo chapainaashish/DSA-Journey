@@ -1,27 +1,23 @@
 package Queue;
 
 class CQueue{
-    int rear, front, size;
+    int rear, front, currentsize, maxsize;
     int queueArray[];
 
-    CQueue(int size){
-        this.queueArray = new  int[size];
+    CQueue(int maxsize){
+        this.queueArray = new  int[maxsize];
         this.rear = -1;
-        this.front = -1;
-        this.size = size;
+        this.front = 0;
+        this.currentsize = 0;
+        this.maxsize = maxsize;
     }
 
     public  boolean isFull(){
-        if (front == 0 && rear == size-1)
-            return  true;
-        else if (front ==rear +1)
-            return true;
-        else
-            return false;
+        return currentsize==maxsize;
     }
 
     public  boolean isEmpty(){
-        return  front == -1;
+        return  currentsize==0;
     }
 
     public void enqueue(int data){
@@ -30,11 +26,9 @@ class CQueue{
         }
 
         else{
-            if (front == -1){
-                front = 0;
-            }
-            rear = (rear+1)%size;
+            rear = (rear+1)%maxsize;
             queueArray[rear] = data;
+            currentsize++;
         }
 
     }
@@ -44,15 +38,18 @@ class CQueue{
             System.out.println("Queue Empty\nReturning -1");
             return  -1;
         }
+        front = (front+1)%maxsize;
         int data = queueArray[front];
-        if (front == rear){
-            front = -1;
-            rear = -1;
-        }
-        else {
-            front = front+1/size;
-        }
+        currentsize--;
         return  data;
+    }
+
+    public void traverse(){
+        int i = front;
+        while(i!=rear+1){
+            System.out.print(queueArray[i] + " ");
+             i = (i+1)%maxsize;
+        }
     }
 }
 
@@ -61,11 +58,11 @@ public class CircularQueue {
         CQueue c1 = new CQueue(5);
         c1.enqueue(5);
         c1.enqueue(4);
-        c1.enqueue(3);
-        c1.enqueue(2);
-        c1.enqueue(1);
-        c1.enqueue(0);
+        c1.enqueue(5);
+        c1.traverse();
         c1.dequeue();
+        System.out.println("\nAfter Dequeue");
+        c1.traverse();
 
     }
 }
