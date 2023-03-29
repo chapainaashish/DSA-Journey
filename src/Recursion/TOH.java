@@ -18,7 +18,7 @@ public class TOH {
 
 
     public static void main(String[] args) {
-        toh(4, 'A', 'B', 'C');
+        toh(3, 'A', 'B', 'C');
         steps();
     }
 }
