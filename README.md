@@ -1,3 +1,3 @@
 # DSA-Journey
 
-Language: Java, Python
+Language: Java
