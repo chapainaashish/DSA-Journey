@@ -51,7 +51,7 @@ public class HeapSort {
         HeapSort ob = new HeapSort();
         ob.sort(arr);
 
-        System.out.println("Sorted array is");
+        System.out.println("Sorted array using heap sort is");
         printArray(arr);
     }
 }

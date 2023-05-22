@@ -45,7 +45,9 @@ public class MergeSort {
 
     public static void main(String[] args) {
         MergeSort m1 = new MergeSort();
-        int array[]={50, 3,2,1};
+        int array[] = {10,8,6,6,11};
+        System.out.println("Sorted Array using Merge sort");
+
         m1.mergeSort(array,0,3);
 
         for(int k=0; k<=3; k++){

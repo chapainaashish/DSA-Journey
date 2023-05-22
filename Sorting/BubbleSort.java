@@ -17,9 +17,10 @@ public class BubbleSort {
     public static void main(String[] args) {
         BubbleSort b1 = new BubbleSort();
         int array[] = {10,8,6,6,11};
+        System.out.println("Sorted Array using Merge sort");
         b1.sortArray(array);
         for (int i=0; i<= array.length-1; i++){
-            System.out.println(array[i]);
+            System.out.print(array[i] + ", ");
         }
     }
 }
